@@ -27,6 +27,8 @@ dependencies {
 
     // 테스트 로깅에 사용
     testImplementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    implementation 'org.jsoup:jsoup:1.18.3'
 }
 
 test {

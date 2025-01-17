@@ -12,16 +12,8 @@ public class MenuServiceImpl implements MenuService{
 
     private List<Menu> menus;
 
-    public MenuServiceImpl() {
-        menus = new ArrayList<>();
-        menus.add(new PizzaMenu(1,"Super Pizza", 30000, PizzaSize.M));
-        menus.add(new PizzaMenu(2,"Cheese Pizza", 30008, PizzaSize.M));
-        menus.add(new PizzaMenu(3,"Pineapple Pizza", 30060, PizzaSize.M));
-        menus.add(new PizzaMenu(4,"Sausage Pizza", 30500, PizzaSize.M));
-        menus.add(new PizzaMenu(5,"Bacon Pizza", 30300, PizzaSize.M));
-
-        menus.add(new DrinkMenu(6,"Cola", 1000, true));
-        menus.add(new DrinkMenu(7,"Americano", 1000, true));
+    public MenuServiceImpl(List<Menu> menus) {
+        this.menus = menus;
     }
 
     @Override
