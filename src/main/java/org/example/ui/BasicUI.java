@@ -20,5 +20,7 @@ public abstract class BasicUI {
         return Integer.parseInt(input(msg));
     }
 
+    public abstract void execute();
+
 
 }
