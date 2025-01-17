@@ -1,6 +1,6 @@
 package org.example.transfer;
 
-public class KTXTMoney extends PublicTMoney{
+public class KTXTMoney extends PublicTMoney {
     public KTXTMoney(int defaultMoney, int per) {
         super(defaultMoney, per);
     }

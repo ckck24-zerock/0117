@@ -1,6 +1,6 @@
 package org.example.transfer;
 
-public class BusTMoney extends PublicTMoney{
+public class BusTMoney extends PublicTMoney {
 
     private int toolPay;
 
