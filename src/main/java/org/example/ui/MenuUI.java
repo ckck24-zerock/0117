@@ -1,5 +1,7 @@
 package org.example.ui;
 
+import org.example.domain.DrinkMenu;
+import org.example.domain.PizzaMenu;
 import org.example.service.MenuService;
 
 import java.util.Scanner;
@@ -23,6 +25,13 @@ public class MenuUI extends BasicUI{
             System.out.println(menu.getMno());
             System.out.println(menu.getName());
             System.out.println(menu.getPrice());
+
+            if(menu instanceof PizzaMenu){
+                System.out.println( ((PizzaMenu)menu).getSize()) ;//캐스팅
+            }else if(menu instanceof DrinkMenu) {
+
+            }
+
         });
 
     }
