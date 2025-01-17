@@ -1,4 +1,4 @@
 package org.example.domain;
 
-public class PizzaMenu {
+public class PizzaMenu extends Menu{
 }
