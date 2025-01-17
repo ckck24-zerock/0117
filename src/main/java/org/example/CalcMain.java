@@ -1,10 +1,24 @@
 package org.example;
 
+import org.example.transfer.BusTMoney;
+import org.example.transfer.CarTMoney;
+import org.example.transfer.KTXTMoney;
+import org.example.transfer.TMoney;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class CalcMain {
 
     public static void main(String[] args) {
+
+        Map<String, TMoney> tmap = new HashMap<>();
+        tmap.put("1", new CarTMoney());
+        tmap.put("2", new KTXTMoney());
+        tmap.put("3", new BusTMoney());
+
+
 
         Scanner scanner = new Scanner(System.in);
 
@@ -16,28 +30,33 @@ public class CalcMain {
 
         String choice = scanner.nextLine();
 
-        if(choice.equals("1")){
+        TMoney transfer = tmap.get(choice);
 
-            int money = distance * 130;
+        System.out.println(transfer.calc(distance));
 
-            System.out.println(money);
 
-        }else if(choice.equals("2")){
-
-            int defaultMoney = 30000;
-
-            int money = defaultMoney + (distance * 50);
-
-            System.out.println(money);
-
-        }else if(choice.equals("3")){
-
-            int defaultMoney = 10000;
-            int toolPay = 40000;
-            int money = defaultMoney + toolPay + (distance * 10);
-
-            System.out.println(money);
-        }
+//        if(choice.equals("1")){
+//
+//            int money = distance * 130;
+//
+//            System.out.println(money);
+//
+//        }else if(choice.equals("2")){
+//
+//            int defaultMoney = 30000;
+//
+//            int money = defaultMoney + (distance * 50);
+//
+//            System.out.println(money);
+//
+//        }else if(choice.equals("3")){
+//
+//            int defaultMoney = 10000;
+//            int toolPay = 40000;
+//            int money = defaultMoney + toolPay + (distance * 10);
+//
+//            System.out.println(money);
+//        }
 
 
     }
