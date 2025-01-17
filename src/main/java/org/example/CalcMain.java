@@ -15,8 +15,8 @@ public class CalcMain {
 
         Map<String, TMoney> tmap = new HashMap<>();
         tmap.put("1", new CarTMoney());
-        tmap.put("2", new KTXTMoney());
-        tmap.put("3", new BusTMoney());
+        tmap.put("2", new KTXTMoney(30000,50));
+        tmap.put("3", new BusTMoney(10000,10,40000));
 
 
 
